@@ -1,0 +1,23 @@
+{
+  "name": "spacies",
+  "version": "0.0.0",
+  "authors": [
+    "Kevin Isom <kevin.isom@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.18.2"
+  }
+}
