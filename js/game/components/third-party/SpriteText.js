@@ -24,6 +24,7 @@ Crafty.c("SpriteText", {
     
     init: function() {
         this.bind("Change", function(obj) {
+
             var tileSize = this._registeredSpriteFonts[this._font],
                 txt, l, posx, i, type, e, chExists, ch, startx, textwidth;
             if (tileSize && this._text && this._changed) {
@@ -45,17 +46,18 @@ Crafty.c("SpriteText", {
                     type = this.has("DOM") ? "DOM" : "Canvas";
                     chExists = this.charName(this._font, l) in Crafty.components(); // check if letter exists in Sprite
                     ch = chExists ? l : l.toUpperCase(); // if letter does not exist, try uppercase
-                    
+                    /*
                     console.log("2D, " + type + ", " + this.charName(this._font, ch));
                     console.log('posx', posx);
                     console.log('y', this.y);
                     console.log('z', this.z);
                     console.log('h', tileSize);
+                    */
                     e = Crafty.e("2D, " + type + ", " + this.charName(this._font, ch)) // create entity for the letter
                             .attr({x: posx, y: this.y, z: this.z, w: tileSize, h: tileSize});
                     this._entities.push(e);
                 }
-                console.log(this._entities);
+                
             }
         });
     }, 
@@ -67,6 +69,7 @@ Crafty.c("SpriteText", {
     text: function(text) {
         if(text === undefined) return this._text;
         if (this._text != text) {
+            this._changed = true
             this._text = "" + text;
             this.trigger("Change");
         }

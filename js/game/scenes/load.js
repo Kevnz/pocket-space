@@ -3,9 +3,9 @@ define(['crafty', 'game/assets/loading'], function (Crafty, loading) {
 	return {
 		init : function (scene) {
 			Crafty.scene('load', function () {
-				loading.init();
-				Crafty.load(['/assets/ships.png', '/assets/play_pause.png', '/assets/SyntaxTerror.png'], function () {
-					console.log('splicing');
+				
+				Crafty.load(['/assets/SyntaxTerror.png','/assets/ships.png', '/assets/play_pause.png'], function () {
+					loading.init();
 					Crafty.sprite(32, '/assets/ships.png', {
 						Starship: [0, 0],
 						EnemyFighter: [1,0],
@@ -15,8 +15,10 @@ define(['crafty', 'game/assets/loading'], function (Crafty, loading) {
 						play: [0, 0],
 						pause: [1,0]
 					});
-
+					setTimeout(function () {
 					Crafty.scene(scene);
+
+				}, 200)
 				});
 
 				//

@@ -1,3 +1,9 @@
+define(['crafty', 'game/utils'], function (Crafty, Utils) {
+
+    return {
+        init : function () {
+            if (Utils.has('SpriteText')) return;
+
 /**@
 * #Joystick
 * @category Controls
@@ -320,5 +326,8 @@ Crafty.c('Joystick', {
 		return true;	
 	}		
 
+});
+        }
+    };
 });
 
