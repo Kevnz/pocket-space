@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "test.js"
+    "test": "test.js",
+    "build": "node_modules/.bin/grunt build",
+    "mocha": "node_modules/.bin/gulp mocha"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +16,15 @@
   "devDependencies": {
     "chai": "^1.9.1",
     "mocha": "^1.18.2",
-    "testem": "^0.6.15"
+    "testem": "^0.6.15",
+    "gulp": "^3.6.1",
+    "amd-optimize": "0.0.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-module-requirejs": "^0.1.4",
+    "grunt-contrib-requirejs": "^0.4.3",
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "rjs-build-analysis": "0.0.3"
   }
 }
