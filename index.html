@@ -18,24 +18,14 @@
 		    align-items: center;
 		}
 		#cr-stage {
-			background-color: #E4EBEA;
+			background-image:url('/assets/bg.png');
+			 
 		}
 	</style>
 
-	<script src='js/libs/require.js'></script>
-	<script src='js/main.js'></script>
-	<script src='js/paths.js'></script> 
-	<script type="text/javascript">
-		/* This code is used to run as soon as Intel activates */
-		var init = function(){
-			console.log('fire it up')
-			require(['game/start'], function (game) {
-			    game.start();
-			});
-			
-		};
-		
-	</script>
+
+
+ 
 </head>
 <body>
 	<!-- content goes here-->
@@ -44,12 +34,7 @@
 		</div>
 	</div>
 
-    <script>
-        require(['domready'], function (onDomReady) {
-            console.log('test');
-            onDomReady( init );
-        })
-
-    </script>
+	<script data-main="/js/start.js" src="/js/libs/require.js"></script>
+ 
 </body>
 </html>
